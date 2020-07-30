@@ -1,0 +1,8 @@
+<div class="todo-item">
+  <span><%= todo_item.content %></span>
+  <%= link_to 'Delete', todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } %>
+</div>
+
+<% if false %>
+  <%= link_to "Mark as Complete", complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch %>
+<% end %>
